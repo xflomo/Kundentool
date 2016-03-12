@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "require": {
+    "joshcam/mysqli-database-class": "dev-master",
+    "typo3fluid/fluid": "dev-master"
+  },
+  "autoload":{
+      "psr-4":{
+        "Fbreuer\\Cms\\": "php"
+      }
+  }
+}
