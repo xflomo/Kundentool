@@ -1,6 +1,6 @@
 <?php
 namespace Fbreuer\Cms;
-
+use Fbreuer\Cms\Validation;
 
 class Kunde
 {
@@ -49,10 +49,22 @@ class Kunde
     }
 
 
+    //Datenbank Methoden
 
-    public function addKundenToDatabase($company)
+    public function addCustomerToDatabase()
     {
-        // Database Class Anbindung
+        if(Validation::checkMail($this->mail))
+        {
+
+        }
     }
+
+    public function findCustomer($company)
+    {
+
+    }
+
+
+
 
 }
