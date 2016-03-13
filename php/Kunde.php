@@ -1,26 +1,20 @@
 <?php
 namespace Fbreuer\Cms;
 
-use ActiveRecord\Model as ActiveRecord;
 
-class User extends ActiveRecord
+class Kunde
 {
-    public function userLogin($PostUsername, $PostPassword)
-    {
-        $options = array("username" => $PostUsername, "password" => $PostPassword);
-        $User = User::find('all', $options);
-        if(!empty($User)){
-            $_SESSION['UserID'] = $User[0]->userid;
-            return true;
-        }else{
-            return false;
-        }
-    }
+    protected $name;
 
-    public function getUserData($UserUid)
+
+
+    public function __construct($url, $depth = 5, $_keywords = null, $_objekts = "link")
     {
-        $options = array("UserID" => $UserUid);
-        $User = User::find('all', $options);
-        return $User[0];
+        $this->_url = $url;
+        $this->_depth = $depth;
+        $parse = parse_url($url);
+        $this->_host = $parse['host'];
+        $this->_keywords = $_keywords;
+        $this->_objekts = $_objekts;
     }
 }
