@@ -7,8 +7,6 @@ $password   = "";
 
 $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
-$teeeeeest="";
-
 if(mysqli_connect_errno())
 {
     echo '<p>Verbindung zum MySQL Server fehlgeschlagen: '.mysqli_connect_error().'</p>';
